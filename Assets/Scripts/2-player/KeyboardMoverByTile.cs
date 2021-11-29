@@ -8,6 +8,7 @@ using UnityEngine.Tilemaps;
 public class KeyboardMoverByTile: KeyboardMover {
     [SerializeField] Tilemap tilemap = null;
     [SerializeField] AllowedTiles allowedTiles = null;
+    [SerializeField] TileBase grassTile;
 
     private TileBase TileOnPosition(Vector3 worldPosition) {
         Vector3Int cellPosition = tilemap.WorldToCell(worldPosition);
@@ -20,7 +21,22 @@ public class KeyboardMoverByTile: KeyboardMover {
         if (allowedTiles.Contain(tileOnNewPosition)) {
             transform.position = newPosition;
         } else {
-            Debug.Log("You cannot walk on " + tileOnNewPosition + "!");
+            if (tileOnNewPosition != null && tileOnNewPosition.name == "mountains")
+            {
+                if (Input.GetKey("x"))
+                {
+                    Vector3Int newPositionV3 = tilemap.WorldToCell(newPosition);
+                    tilemap.SetTile(newPositionV3, grassTile);
+                    if(tileOnNewPosition.name == "grass")
+                    {
+                        transform.position = newPosition;
+                    }
+                }
+                if (tileOnNewPosition.name != "grass")
+                {
+                    Debug.Log("You cannot walk on " + tileOnNewPosition + "!");
+                }
+            }
         }
     }
 }

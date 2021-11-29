@@ -58,7 +58,7 @@ public class CaveGenerator {
                     bufferOld[x, y] = 1;
                 } else {
                     //Random walls and caves
-                    bufferOld[x, y] = random.NextDouble() < randomFillPercent ? 1 : 0;
+                    bufferOld[x, y] = random.NextDouble() < randomFillPercent ? 1 : random.Next(-1, 1);
                 }
             }
         }
@@ -87,7 +87,7 @@ public class CaveGenerator {
                 } else if (surroundingWalls == 4) {
                     bufferNew[x, y] = bufferOld[x, y];
                 } else {
-                    bufferNew[x, y] = 0;
+                    bufferNew[x, y] = createLogicalSurround(x, y);
                 }
             }
         }
@@ -96,6 +96,28 @@ public class CaveGenerator {
         (bufferOld, bufferNew) = (bufferNew, bufferOld);
     }
 
+    //* Normals every area by the most common tile type .
+    private int createLogicalSurround(int x, int y)
+    {
+        int floorCounter = 0;
+        int wallCounter = 0;
+
+        for (int nearX = x - 1; nearX <= x + 1; nearX++)
+        {
+            for (int nearY = y - 1; nearY <= y + 1; nearY++)
+            {
+                if (bufferOld[nearX, nearY] == 0)
+                {
+                    floorCounter++;
+                }
+                else if (bufferOld[nearX, nearY] == -1)
+                {
+                    wallCounter++;
+                }
+            }
+        }
+        return (floorCounter >= wallCounter)? 0 : -1;
+    }
 
 
     //Given a cell, how many of the 8 surrounding cells are walls?

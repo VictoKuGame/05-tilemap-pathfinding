@@ -16,8 +16,11 @@ public class TilemapCaveGenerator: MonoBehaviour {
     [Tooltip("The tile that represents a wall (an impassable block)")]
     [SerializeField] TileBase wallTile = null;
 
-    [Tooltip("The tile that represents a floor (a passable block)")]
-    [SerializeField] TileBase floorTile = null;
+    [Tooltip("The first tile that represents a floor (a passable block)")]
+    [SerializeField] TileBase floorTile1 = null;
+
+    [Tooltip("The second tile that represents a floor (a passable block)")]
+    [SerializeField] TileBase floorTile2 = null;
 
     [Tooltip("The percent of walls in the initial random map")]
     [Range(0, 1)]
@@ -71,7 +74,7 @@ public class TilemapCaveGenerator: MonoBehaviour {
         for (int y = 0; y < gridSize; y++) {
             for (int x = 0; x < gridSize; x++) {
                 var position = new Vector3Int(x, y, 0);
-                var tile = data[x, y] == 1 ? wallTile: floorTile;
+                var tile = data[x, y] == 0 ? floorTile2 : (data[x, y] == 1 ? wallTile:floorTile1) ;
                 tilemap.SetTile(position, tile);
             }
         }
