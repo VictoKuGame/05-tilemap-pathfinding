@@ -16,10 +16,15 @@ Use A,D to move , SPACE to jump.
 Was made as one a weekly task in a unity game development course.
 
 By VictoKu1 .
-
-##### [Keyboard Mover By Tile Script](https://github.com/VictoKuGame/05-tilemap-pathfinding/blob/master/Assets/Scripts/2-player/KeyboardMoverByTile.cs)
+למטלה השבועית השינויים שבוצעו הם עבור :
+סעיף ד' :
+השינוי שבוצע הוא שינוי בוקטור לתלת מימדי כך שיחזיק פרמטר נוסף עבור סוג האריח הנוסף, כמו כן נוספה פונקציה שמשנה בכל סביבה את האריח לאריח הפופולרי ביותר.
 ##### [Tilemap Cave Generator Script .](https://github.com/VictoKuGame/05-tilemap-pathfinding/blob/master/Assets/Scripts/4-generation/TilemapCaveGenerator.cs)
 ##### [Cave Generator Script.](https://github.com/VictoKuGame/05-tilemap-pathfinding/blob/master/Assets/Scripts/4-generation/CaveGenerator.cs)
+
+סעיף ה' :
+כאשר נלחץ על X בסביבה של  הר עם לחיצה על מקח הכיוון הרלווונטי, נוכל לחצוב בהר .
+##### [Keyboard Mover By Tile Script](https://github.com/VictoKuGame/05-tilemap-pathfinding/blob/master/Assets/Scripts/2-player/KeyboardMoverByTile.cs)
 
 ## Credits
 
