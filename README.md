@@ -17,14 +17,9 @@ Was made as one a weekly task in a unity game development course.
 
 By VictoKu1 .
 
-##### [Camera Controller Script.](https://github.com/VictoKuGame/WEx5-Jupmer/blob/main/Assets/CameraController.cs)
-##### [Enemy Controller Script.](https://github.com/VictoKuGame/WEx5-Jupmer/blob/main/Assets/EnemyController.cs)
-##### [Finish Scene Script.](https://github.com/VictoKuGame/WEx5-Jupmer/blob/main/Assets/Finish1.cs)
-##### [Game Over Screen Script .](https://github.com/VictoKuGame/WEx5-Jupmer/blob/main/Assets/GameOverScreen.cs)
-##### [Player Control Script .](https://github.com/VictoKuGame/WEx5-Jupmer/blob/main/Assets/Hero.cs)
-##### [Level 2 Meteor Spawning Script.](https://github.com/VictoKuGame/WEx5-Jupmer/blob/main/Assets/SpawnManager.cs)
-##### [Start Screen Script.](https://github.com/VictoKuGame/WEx5-Jupmer/blob/main/Assets/Start.cs)
-
+##### [Keyboard Mover By Tile Script](https://github.com/VictoKuGame/05-tilemap-pathfinding/blob/master/Assets/Scripts/2-player/KeyboardMoverByTile.cs)
+##### [Tilemap Cave Generator Script .](https://github.com/VictoKuGame/05-tilemap-pathfinding/blob/master/Assets/Scripts/4-generation/TilemapCaveGenerator.cs)
+##### [Cave Generator Script.](https://github.com/VictoKuGame/05-tilemap-pathfinding/blob/master/Assets/Scripts/4-generation/CaveGenerator.cs)
 
 ## Credits
 
